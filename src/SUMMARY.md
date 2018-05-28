@@ -5,3 +5,4 @@
 - [Ristretto in Detail](./details/index.md)
 - [Explicit Formulas](./formulas/index.md)
 - [Test Vectors](./test_vectors/index.md)
+- [Ristretto Implementations](./implementations.md)
