@@ -2,4 +2,7 @@
 authors = ["Henry de Valence"]
 multilingual = false
 src = "src"
-title = "Ristretto"
+title = "The Ristretto Group"
+
+[output.html]
+theme = "src/theme"
