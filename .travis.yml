@@ -1,5 +1,6 @@
 language: rust
-cache: cargo
+# disable until we get graceful failures in cargo install
+#cache: cargo
 sudo: false
 
 branches:
