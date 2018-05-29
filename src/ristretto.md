@@ -37,7 +37,7 @@ changes.
 This site is organized into several sections:
 
 - [Why Ristretto?](./why_ristretto.md) describes the pitfalls of the cofactor abstraction mismatch.
-- [What is Ristretto?](./what_is_ristretto.md) describes what Ristretto provides.
+- [What is Ristretto?](./what_is_ristretto.md) describes what Ristretto provides to protocol implementors.
 - [Ristretto in Detail](./details/index.md) contains mathematical justification for why Ristretto works.
 - [Explicit Formulas](./formulas/index.md) describes how to implement Ristretto.
 - [Test Vectors](./test_vectors/index.md) contains test vectors for the Ristretto functions.
