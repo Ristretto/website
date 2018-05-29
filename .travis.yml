@@ -1,6 +1,5 @@
 language: rust
-# disable until we get graceful failures in cargo install
-#cache: cargo
+cache: cargo
 sudo: false
 
 branches:
@@ -14,7 +13,8 @@ install:
 
 before_script:
   - npm install -g firebase-tools 
-  - cargo install mdbook
+  # Check if the mdbook binary exists before compiling it
+  - which mdbook || cargo install mdbook
 
 script:
   - mdbook build
