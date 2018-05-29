@@ -1,5 +1,6 @@
 # Ristretto
 
+- [Ristretto](./ristretto.md)
 - [Why Ristretto?](./why_ristretto.md)
 - [What is Ristretto?](./what_is_ristretto.md)
 - [Ristretto in Detail](./details/index.md)
