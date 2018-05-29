@@ -1,0 +1,1 @@
+# Encoding from Extended Coordinates
