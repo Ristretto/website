@@ -1,16 +1,15 @@
 # Encoding in Extended Coordinates
 
-The formulas above are given in affine coordinates, but the usual
-internal representation is extended twisted Edwards coordinates \\(
+The formulas on the previous page are given in affine coordinates, but the
+usual internal representation is extended twisted Edwards coordinates \\(
 (X:Y:Z:T) \\) with \\( x = X/Z \\), \\(y = Y/Z\\), \\(xy = T/Z \\).
 
-This section only covers the cofactor-\\(8\\) case, since it is more complicated:
-selecting the distinguished representative of the coset
-requires the affine coordinates \\( (x,y) \\), and computing \\( s
-\\) requires an inverse square root.
-As inversions are expensive, we'd like to be able to do this
-whole computation with only one inverse square root, by batching
-together the inversion and the inverse square root.
+This presents a complication for the cofactor-\\(8\\) case: selecting the
+distinguished representative of the coset requires the affine coordinates \\(
+(x,y) \\), and computing \\( s \\) requires an inverse square root.  As
+inversions are expensive, we'd like to be able to do this whole computation
+with only one inverse square root, by batching together the inversion and the
+inverse square root.
 
 It is not obvious how to do this, since we need the inverse square
 root of one of two values, depending on what the distinguished
@@ -69,11 +68,11 @@ $$
 $$
 which relates the two quantities we want to compute:
 $$
-\frac 1 {Z^2 - aX^2} = \frac 1 {a - d} \frac {Z^2 - Y^2} {X^2 Y^2}
+\frac 1 {Z^2 - aX^2} = \frac 1 {a - d} \frac {Z^2 - Y^2} {X^2 Y^2},
 $$
 so
 $$
-\frac 1 {\sqrt{Z^2 - aX^2}} = \frac 1 {\sqrt{a - d}} \sqrt{ \frac {Z^2 - Y^2} {X^2 Y^2} }
+\frac 1 {\sqrt{Z^2 - aX^2}} = \frac 1 {\sqrt{a - d}} \sqrt{ \frac {Z^2 - Y^2} {X^2 Y^2} }.
 $$
 
 ## Explicit Encoding Formulas
@@ -137,3 +136,6 @@ element \\(s\\), otherwise reject.
 12. Check that \\(t \\) is nonnegative and that \\( y \neq 0 \\), otherwise reject.
 13. Return \\( P = (x: y: 1: t) \\)
 
+## TODO
+
+Add explicit formulas for the cofactor 4 case.

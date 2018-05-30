@@ -21,8 +21,9 @@ P + \mathcal J[2] = \left\\{
 \right\\}.
 $$
 Notice that replacing \\(a\\) by \\(-a\\) just swaps the last two
-points, so this set does not depend on the choice of \\(a\\).  In
-what follows we require \\(a = \pm 1\\).
+points, so this set does not depend on the choice of \\(a\\).  
+
+Ristretto requires \\(a = \pm 1\\).
 
 ## Encoding \\(\mathcal J / \mathcal J[2]\\)
 
