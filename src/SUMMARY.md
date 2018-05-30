@@ -10,7 +10,7 @@
   - [Torquing Points](./details/torquing.md)
   - [The Isogeny](./details/isogeny.md)
   - [Encoding with the Isogeny](./details/isogeny_encoding.md)
-  - [The Ristretto Encoding](./details/ristretto_encoding.md)
+  - [Encoding in Affine Coordinates](./details/ristretto_encoding.md)
   - [Encoding in Extended Coordinates](./details/encoding_in_extended.md)
   - [Batched Double-and-Encode](./details/batched_double.md)
   - [Equality Testing](./details/equality.md)

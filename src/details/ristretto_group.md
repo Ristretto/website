@@ -26,5 +26,5 @@ which has prime order \\( (8\ell/2)/4 = \ell \\).
 
 In particular, Curve25519 has \\( \mathcal E(\mathbb
 F\_p) \cong \mathbb Z / 8 \times \mathbb Z / \ell\\), where \\( \ell
-= 2\^{252} + \cdots \\) is a large prime, and meets the requirements
+= 2\^{252} + \cdots \\) is a large prime, so it meets the requirements
 for the cofactor \\(8\\) case.

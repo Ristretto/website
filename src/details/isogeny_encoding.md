@@ -23,9 +23,10 @@ J / \mathcal J[2] \\) defined above to \\(\[2\](\mathcal E)/\mathcal
 E[2]\\), by encoding the Edwards point \\((x,y)\\) using the Jacobi
 quartic encoding of \\(\theta\^{-1}(x,y)\\).
 
-Since \\(\\# (\[2\](\mathcal E) / \mathcal E[2]) = (\\#\mathcal
-E)/4\\), if \\(\mathcal E\\) has cofactor \\(4\\), we're done.
-Otherwise, if \\(\mathcal E\\) has cofactor \\(8\\), as in the
-Curve25519 case, we use the torquing procedure to lift \\(\mathcal E
-/ \mathcal E[4]\\) to \\(\mathcal E / \mathcal E[2]\\), and then
-apply the encoding for \\( \[2\](\mathcal E) / \mathcal E[2] \\).
+In the cofactor-\\(4\\) case, this is the group we wanted to construct, so
+we're done.
+
+In the cofactor-\\(8\\) case, we use the torquing procedure to canonically lift
+\\(\mathcal E / \mathcal E[4]\\) to \\(\mathcal E / \mathcal E[2] \\), and then
+apply the encoding above.  This gives an encoding of the group \\( [2]\mathcal
+E / \mathcal E[4]\\).

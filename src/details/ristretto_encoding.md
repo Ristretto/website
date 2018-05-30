@@ -1,10 +1,10 @@
-# The Ristretto Encoding
+# Encoding in Affine Coordinates
 
 We can write the above encoding/decoding procedure in affine
 coordinates, before describing optimized formulas to and from
 projective coordinates.
 
-## Encoding in Affine Coordinates
+## Encoding
 
 On input \\( (x,y) \in \[2\](\mathcal E)\\), a representative for a
 coset in \\( \[2\](\mathcal E) / \mathcal E[4] \\):
@@ -50,15 +50,15 @@ $$
 $$
 so that the sign of \\(s/t\\) is determined by the sign of \\(x\\).
 
-Recall that to choose a canonical representative of \\( (s,t) +
-\mathcal J[2] \\), it's sufficient to make two sign choices: the
-sign of \\(s\\) and the sign of \\(s/t\\).  Step 2 determines the
-sign of \\(s/t\\), while step 3 computes \\(s\\) and determines its
-sign (by choosing the positive square root).  Finally, the check
-that \\(y \neq -1\\) prevents division-by-zero when encoding the
-identity; it falls out of the optimized formulas below.
+Recall that to choose a canonical representative of \\( (s,t) + \mathcal J[2]
+\\), it's sufficient to make two sign choices: the sign of \\(s\\) and the sign
+of \\(s/t\\).  Step 2 determines the sign of \\(s/t\\), while step 3 computes
+\\(s\\) and determines its sign (by choosing the positive square root).
+Finally, the check that \\(y \neq -1\\) prevents division-by-zero when encoding
+the identity.  If the inverse square root function returns \\(0\\), this check
+falls out of the optimized formulas for projective coordinates.
 
-## Decoding to Affine Coordinates
+## Decoding
 
 On input `s_bytes`, decoding proceeds as follows:
 
