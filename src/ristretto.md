@@ -1,3 +1,11 @@
+<style type="text/css">
+    .light .menu-bar h1 {
+      margin-top: 1em;
+      color: #444;
+      font-size: 2em;
+      font-weight: 200;
+    }
+</style>
 <img style="float: left; width: 25%;" src="/theme/ristretto-sm.png">
 
 **Ristretto** is a variant of Decaf compatible with cofactor-\\(8\\) curves,
