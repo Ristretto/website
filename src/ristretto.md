@@ -1,6 +1,14 @@
+<style type="text/css">
+    .light .menu-bar h1 {
+      margin-top: 1em;
+      color: #444;
+      font-size: 2em;
+      font-weight: 200;
+    }
+</style>
 <img style="float: left; width: 25%;" src="/theme/ristretto-sm.png">
 
-**Ristretto** is a variant of Decaf compatible with cofactor-\\(8\\) curves,
+**Ristretto** is a variant of [Decaf] compatible with cofactor-\\(8\\) curves,
 such as Curve25519.
 
 In particular, this allows an existing Curve25519 library to implement a
@@ -8,6 +16,8 @@ prime-order group with only a thin abstraction layer, and makes it possible
 for systems using Ed25519 signatures to be safely extended with zero-knowledge
 protocols, with **no additional cryptographic assumptions** and **minimal code
 changes**.
+
+[Decaf]: https://www.shiftleft.org/papers/decaf/
 
 ## Organization
 
