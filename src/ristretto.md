@@ -1,7 +1,12 @@
 <style type="text/css">
     .light .menu-bar h1 {
-      margin-top: 1em;
       color: #444;
+    }
+    .coal .menu-bar h1 {
+      color: #98a3ad;
+    }
+    .menu-bar h1 {
+      margin-top: 1em;
       font-size: 2em;
       font-weight: 200;
     }
