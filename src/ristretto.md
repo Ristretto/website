@@ -22,6 +22,13 @@ for systems using Ed25519 signatures to be safely extended with zero-knowledge
 protocols, with **no additional cryptographic assumptions** and **minimal code
 changes**.
 
+Ristretto is a general technique for constructing a prime-order group
+from an Edwards curve with cofactor \\(4\\) or \\(8\\), as well as two
+specific parameter choices:
+
+* `ristretto255`, built on top of Curve25519;
+* `ristretto448`, built on top of Ed448-Goldilocks.
+
 [Decaf]: https://www.shiftleft.org/papers/decaf/
 
 ## Organization

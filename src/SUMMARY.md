@@ -21,4 +21,6 @@
   - [Testing Equality](./formulas/equality.md)
   - [Hash-to-Point with Elligator](./formulas/elligator.md)
 - [Test Vectors](./test_vectors/index.md)
+  - [`ristretto255`](./test_vectors/ristretto255.md)
+  - [`ristretto448`](./test_vectors/ristretto448.md)
 - [Ristretto Implementations](./implementations.md)
