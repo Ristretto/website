@@ -17,6 +17,11 @@ before_script:
   - which mdbook || cargo install mdbook
 
 script:
+  # Pull dependencies for mdbook test
+  - cargo test --release
+  # Use prebuilt dependencies when running mdbook test
+  - mdbook test -L target/release/deps
+  # Finally, build the site.
   - mdbook build
 
 after_success:
