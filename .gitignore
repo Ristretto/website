@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 book/
+Cargo.toml
+target/

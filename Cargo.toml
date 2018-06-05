@@ -1,0 +1,9 @@
+[package]
+name = "ristretto-website"
+version = "0.1.0"
+authors = ["Henry de Valence <hdevalence@hdevalence.ca>"]
+
+[dependencies]
+sha2 = "0.7"
+hex = "0.3"
+curve25519-dalek = "0.17"
