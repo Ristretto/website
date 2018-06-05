@@ -14,8 +14,11 @@ extern crate curve25519_dalek;
 // of the basepoint, represented as hex strings.
 
 let encodings_of_small_multiples = [
+    // This is the identity point
     "0000000000000000000000000000000000000000000000000000000000000000",
+    // This is the basepoint
     "e2f2ae0a6abc4e71a884a961c500515f58e30b6aa582dd8db6a65945e08d2d76",
+    // These are small multiples of the basepoint
     "6a493210f7499cd17fecb510ae0cea23a110e8d5b901f8acadd3095c73a3b919",
     "94741f5d5d52755ece4f23f044ee27d5d1ea1e2bd196b462166b16152a9d0259",
     "da80862773358b466ffadfe0b3293ab3d9fd53c5ea6c955358f568322daf6a57",
