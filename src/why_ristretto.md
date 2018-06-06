@@ -68,18 +68,20 @@ the identity.  But this is extremely expensive.
 
 Another option is to mandate that all scalars have particular bit patterns, as
 in X25519 and Ed25519.  However, this means that scalars are no longer
-well-defined \\( \mod \ell \\), which makes HKD schemes
-[much more complicated][hierarchical_keys].  Yet another alternative, is to
+well-defined \\( \mathrm{mod} \ell \\), which makes HKD schemes
+[much more complicated][hierarchical_keys].  Yet another approach is to
 choose a [torsion-safe representative][torsion_safe]:
-an integer which is \\( 0 \mod h \\) and with a particular value \\( \mod \ell \\).
-Torsion-safe representatives unfortunately do not work in practice for some
-existing implementations, as they may be too large to fit into 255 bits.
+an integer which is \\( 0 \mathrm{mod} h \\) and with a particular value \\(
+\mathrm{mod} \ell \\), so that scalar multiplications remove the low-order
+component.  But these representatives are a few bits too large to be used with
+existing implementations, and in any case aren't a comprehensive
+solution.
 
 ## A comprehensive solution
 
-Rather than bit-twiddling, point mangling, and otherwise kludged-in ad-hoc
-checks, Ristretto is a thin abstraction layer that provides a prime-order group,
-closing the abstraction mismatches.
+Rather than bit-twiddling, point mangling, or otherwise kludged-in ad-hoc
+fixes, Ristretto is a thin layer that provides protocol
+implementors with the correct abstraction: a prime-order group.
 
 [decaf_paper]: https://eprint.iacr.org/2015/673.pdf
 [monero]: https://moderncrypto.org/mail-archive/curves/2017/000898.html
