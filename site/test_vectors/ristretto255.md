@@ -62,6 +62,15 @@ let bad_encodings = [
     // These are all bad because they're negative field elements.
     "0100000000000000000000000000000000000000000000000000000000000000",
     "01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f",
+    // These are all bad because they give a nonsquare x^2.
+    "26948d35ca62e643e26a83177332e6b6afeb9d08e4268b650f1f5bbd8d81d371",
+    "4eac077a713c57b4f4397629a4145982c661f48044dd3f96427d40b147d9742f",
+    "de6a7b00deadc788eb6b6c8d20c0ae96c2f2019078fa604fee5b87d6e989ad7b",
+    "bcab477be20861e01e4a0e295284146a510150d9817763caf1a6f4b422d67042",
+    "2a292df7e32cababbd9de088d1d1abec9fc0440f637ed2fba145094dc14bea08",
+    "f4a9e534fc0d216c44b218fa0c42d99635a0127ee2e53c712f70609649fdff22",
+    "8268436f8c4126196cf64b3c7ddbda90746a378625f9813dd9b8457077256731",
+    "2810e5cbc2cc4d4eece54f61c6f69758e289aa7ab440b3cbeaa21995c2f4232b",
     // More bad encodings... these should hit each of the 4 checks.
 ];
 
