@@ -71,7 +71,17 @@ let bad_encodings = [
     "f4a9e534fc0d216c44b218fa0c42d99635a0127ee2e53c712f70609649fdff22",
     "8268436f8c4126196cf64b3c7ddbda90746a378625f9813dd9b8457077256731",
     "2810e5cbc2cc4d4eece54f61c6f69758e289aa7ab440b3cbeaa21995c2f4232b",
-    // More bad encodings... these should hit each of the 4 checks.
+    // This is s = -1, which causes y = 0.
+    "ecffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f",
+    // These are all bad because they give a negative xy value.
+    "3eb858e78f5a7254d8c9731174a94f76755fd3941c0ac93735c07ba14579630e",
+    "a45fdc55c76448c049a1ab33f17023edfb2be3581e9c7aade8a6125215e04220",
+    "d483fe813c6ba647ebbfd3ec41adca1c6130c2beeee9d9bf065c8d151c5f396e",
+    "8a2e1d30050198c65a54483123960ccc38aef6848e1ec8f5f780e8523769ba32",
+    "32888462f8b486c68ad7dd9610be5192bbeaf3b443951ac1a8118419d9fa097b",
+    "227142501b9d4355ccba290404bde41575b037693cef1f438c47f8fbf35d1165",
+    "5c37cc491da847cfeb9281d407efc41e15144c876e0170b499a96a22ed31e01e",
+    "445425117cb8c90edcbc7c1cc0e74f747f2c1efa5630a967c64f287792a48a4b",
 ];
 
 // Test that all of the bad encodings are rejected
