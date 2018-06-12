@@ -1,8 +1,8 @@
 [book]
 authors = ["Henry de Valence"]
 multilingual = false
-src = "src"
+src = "site"
 title = "The Ristretto Group"
 
 [output.html]
-theme = "src/theme"
+theme = "site/theme"
