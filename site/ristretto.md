@@ -13,8 +13,9 @@
 </style>
 <img style="float: left; width: 25%;" src="/theme/ristretto-sm.png">
 
-**Ristretto** is a variant of [Decaf] compatible with cofactor-\\(8\\) curves,
-such as Curve25519.
+**Ristretto** is a technique for constructing prime order elliptic curve groups
+with non-malleable encodings. It extends the [Decaf] approach to cofactor
+elimination to support cofactor-\\(8\\) curves such as Curve25519.
 
 In particular, this allows an existing Curve25519 library to implement a
 prime-order group with only a thin abstraction layer, and makes it possible
@@ -22,12 +23,13 @@ for systems using Ed25519 signatures to be safely extended with zero-knowledge
 protocols, with **no additional cryptographic assumptions** and **minimal code
 changes**.
 
-Ristretto is a general technique for constructing a prime-order group
-from an Edwards curve with cofactor \\(4\\) or \\(8\\), as well as two
-specific parameter choices:
+Ristretto can be used in conjunction with Edwards curves with cofactor \\(4\\)
+or \\(8\\), and provides the following specific parameter choices:
 
 * `ristretto255`, built on top of Curve25519;
-* `ristretto448`, built on top of Ed448-Goldilocks.
+* `ristretto448`<sup>†</sup> , built on top of Ed448-Goldilocks.
+
+† NOTE: Not compatible with the original [Decaf] group
 
 [Decaf]: https://www.shiftleft.org/papers/decaf/
 
@@ -41,9 +43,3 @@ This site is organized into several chapters:
 - [Explicit Formulas](./formulas/index.html) describes how to implement Ristretto.
 - [Test Vectors](./test_vectors/index.html) contains test vectors for the Ristretto functions.
 - [Ristretto Implementations](./implementations.html) contains a list of implementations of Ristretto.
-
-## TODO
-
-This is the landing page. It should link to the other pages, have the
-coffee graphic, and have the author list.
-
