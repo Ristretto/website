@@ -126,12 +126,12 @@ element \\(s\\), otherwise reject.
 3. Check that \\( s \\) is nonnegative, otherwise reject.
 4. \\( u_1 \gets 1 + as^2 \\)
 5. \\( u_2 \gets 1 - as^2 \\)
-6. \\( v \gets (ad)u_1^2 - u_2^2 \textcolor{gray}{= ad(1+as^2)^2 - (1-as^2)^2} \\)
+6. \\( v \gets (ad)u_2^2 - u_1^2 \textcolor{gray}{= ad(1-as^2)^2 - (1+as^2)^2} \\)
 7. \\( I \gets \mathrm{invsqrt}( v u_2^2 ) \textcolor{gray}{= 1/\sqrt{v u_2^2} } \\)
 8. \\( D_x \gets Iu_2 \textcolor{gray}{= 1/\sqrt{v} } \\)
 9. \\( D_y \gets ID_x v \textcolor{gray}{= I^2 u_2 v = (v u_2) / (v u_2^2) = 1/u_2 } \\)
 10. \\( x \gets |2sD_x| \textcolor{gray}{= +\sqrt{ 4s^2 / (ad(1+as^2)^2 - (1-as^2)^2 )}}\\)
-11. \\( y \gets u_1 D_y \textcolor{gray}{= (1+as^2)/(1-as^2) } \\)
+11. \\( y \gets u_1 D_y \textcolor{gray}{= (1-as^2)/(1+as^2) } \\)
 12. \\( t \gets xy \\)
 12. Check that \\(t \\) is nonnegative and that \\( y \neq 0 \\), otherwise reject.
 13. Return \\( P = (x: y: 1: t) \\)
