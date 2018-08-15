@@ -20,11 +20,28 @@ dangerous and unsafe to implement the Ristretto functions as operating on
 arbitrary curve points, rather than only on the representatives contained in a
 distinct Ristretto point type.
 
-## TODO
+## Implementation
 
-This section should have explicit formulas for Ristretto, aimed at
-implementations.
+The Decaf paper suggests using a quotient group, such as \\( \mathcal E /
+\mathcal E[4] \\) or \\( 2 \mathcal E[2] \\), to implement a prime-order group
+using a non-prime-order curve with cofactor \\( 4 \\).
 
-It should also have a description of "how to implement Ristretto", i.e.,
-what functionality is required: encoding, decoding, equality,
-hash-to-point, type safety, etc.
+In terms of invasiveness to a pre-existing curve implementation, this requires
+changing only:
+
+1. The function for equality checking (so that two representatives
+   of the same coset are considered equal);
+2. The function for encoding (so that two representatives of the
+   same coset are encoded as identical bitstrings);
+3. The function for decoding (so that only the canonical encoding of
+   a coset is accepted).
+
+Internally, each coset is represented by a curve point; two points
+\\( P, Q \\) may represent the same coset in the same way that two
+points with different \\(X, Y, Z\\) coordinates may represent the
+same point.  The group operations are carried out with no overhead
+using Edwards formulae.
+
+Additionally, producing a Ristretto implementation will require a hash-to-point
+function.  We will explicitly detail this and the above changes in the following
+sections.
