@@ -22,8 +22,8 @@ Otherwise, the decoding routine is as follows:
    \\( d = \frac{-121665}{121666} \mod p\\) for the
    case of Ristretto255.
 6. Compute `I` as \\( invsqrt( v u_1^{2} ) \\).
-7. Compute `D_x` as \\( I u_2 == \frac{1}{\sqrt{v}}).
-8. Compute `D_y` as \\( I D_x v).
+7. Compute `D_x` as \\( I u_2 \\).
+8. Compute `D_y` as \\( I D_x v \\).
 9. Compute the field element `x` as \\( 2 s Dx \\).
 10. If `x` is negative, conditionally negate it in constant time.
 11. Compute `y` as \\( u_2 D_y).
