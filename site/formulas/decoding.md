@@ -25,7 +25,7 @@ Otherwise, the decoding routine is as follows:
 7. Compute `D_x` as \\( I u_2 \\).
 8. Compute `D_y` as \\( I D_x v \\).
 9. Compute the field element `x` as \\( 2 s Dx \\).
-10. If `x` is negative, conditionally negate it in constant time.
+10. If `x` is negative, then negate it.
 11. Compute `y` as \\( u_2 D_y).
 12. Compute `t` as \\( x y \\).
 13. If the inversion in step #6 failed, or `t` is negative, or `y` is
