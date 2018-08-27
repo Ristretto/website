@@ -21,7 +21,7 @@ Otherwise, the decoding routine is as follows:
    the Edwards curve constants \\( a = -1 \\) and
    \\( d = \frac{-121665}{121666} \mod p\\) for the
    case of Ristretto255.
-6. Compute `I` as \\( \frac{1}{\sqrt{ v u_1^{2}}} \\).
+6. Compute `I` as \\( invsqrt( v u_1^{2} ) \\).
 7. Compute `D_x` as \\( I u_2 == \frac{1}{\sqrt{v}}).
 8. Compute `D_y` as \\( I D_x v).
 9. Compute the field element `x` as \\( 2 s Dx \\).
