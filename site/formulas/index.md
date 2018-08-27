@@ -22,19 +22,19 @@ distinct Ristretto point type.
 
 ## Implementation
 
-The Decaf paper suggests using a quotient group, such as \\( \mathcal E /
-\mathcal E[4] \\) or \\( 2 \mathcal E[2] \\), to implement a prime-order group
-using a non-prime-order curve with cofactor \\( 4 \\).
+In terms of invasiveness to a pre-existing curve implementation,
+implementing Ristretto requires changing only:
 
-In terms of invasiveness to a pre-existing curve implementation, this requires
-changing only:
-
-1. The function for equality checking (so that two representatives
+0. A distinct type for Ristretto points which forwards curve operations
+   on points to their corresponding canonical representative in the Ristretto
+   group (as mentioned in the previous section);
+1. A function for equality checking (so that two representatives
    of the same coset are considered equal);
-2. The function for encoding (so that two representatives of the
+2. A function for encoding (so that two representatives of the
    same coset are encoded as identical bitstrings);
-3. The function for decoding (so that only the canonical encoding of
-   a coset is accepted).
+3. A function for decoding (so that only the canonical encoding of
+   a coset is accepted);
+4. A function for hashing to the Ristretto group.
 
 Internally, each coset is represented by a curve point; two points
 \\( P, Q \\) may represent the same coset in the same way that two
