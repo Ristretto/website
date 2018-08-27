@@ -6,14 +6,8 @@ Ristretto point, the implementation must:
 1. Check that `s_bytes` is in fact 32 octets.  (In typed languages the
    implementor should guarantee this through the type system, otherwise
    there should be an explicit check.)
-2. Decode `s_bytes` into a field element, `s`, then re-encode `s` into
-   another array of 32 octets, `s_bytes_check`.  Check that the two
-   arrays `s_bytes` and `s_bytes_check` are equal in constant time.
-   This is done to ensure that the field element `s` satisfies
-   \\( s < p : p \in (2^{255}, 2^{255}-19] \\) (for the case of
-   Ristretto255).  The implementor must
-   ensure that the field element decoding routine ignores the high
-   bit.
+2. Check that the encoding `s_bytes` is canonical\\( \dag \\) and
+   then decode `s_bytes` into a field element, `s`.
 3. Check that `s` is non-negative.
 
 If any of the above conditions are not met, the decoding routine must abort.
@@ -37,3 +31,12 @@ Otherwise, the decoding routine is as follows:
 13. If the inversion in step #6 failed, or `t` is negative, or `y` is
     zero, abort.  Otherwise, return the Ristretto point
     \\(( x, y, 1, t \\)).
+
+\\( \dag \\) One way to check that the encoding is canonical is to
+decode `s_bytes` into `s`, then re-encode `s` into `s_bytes_check`,
+and then check that `s_bytes` and `s_bytes_check` are equal.  This is
+done to ensure that the field element `s` satisfies
+\\( s < p : p \in (2^{255}, 2^{255}-19] \\) (for the case of Ristretto255).
+However, for this to work, the implementation of field element
+encoding MUST be canonical and the decoding MUST reject the high bit
+(for the case of Ristretto255).
