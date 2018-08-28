@@ -28,7 +28,8 @@ Otherwise, the decoding routine is as follows:
 10. If `x` is negative, then negate it.
 11. Compute `y` as \\( u_2 D_y \\).
 12. Compute `t` as \\( x y \\).
-13. If the inversion in step #6 failed, or `t` is negative, or `y` is
+13. If the inverse square root in step #6 was not correct\\( \ddag \\),
+    or `t` is negative, or `y` is
     zero, abort.  Otherwise, return the Ristretto point
     \\(( x, y, 1, t \\)).
 
@@ -40,3 +41,28 @@ done to ensure that the field element `s` satisfies
 However, for this to work, the implementation of field element
 encoding MUST be canonical and the decoding MUST reject the high bit
 (for the case of Ristretto255).
+
+\\( \ddag \\) 
+Using the same trick as in ed25519 decoding, we merge the
+inversion, the square root, and the square test as follows.
+
+To compute sqrt(α), we can compute β = α^((p+3)/8).
+Then β^2 = ±α, so multiplying β by sqrt(-1) if necessary
+gives sqrt(α).
+
+To compute 1/sqrt(α), we observe that
+   1/β = α^(p-1 - (p+3)/8) = α^((7p-11)/8)
+                           = α^3 * (α^7)^((p-5)/8).
+
+We can therefore compute sqrt(u/v) = sqrt(u)/sqrt(v)
+by first computing
+   r = u^((p+3)/8) v^(p-1-(p+3)/8)
+     = u u^((p-5)/8) v^3 (v^7)^((p-5)/8)
+     = (uv^3) (uv^7)^((p-5)/8).
+
+If v is nonzero and u/v is square, then r^2 = ±u/v,
+                                    so vr^2 = ±u.
+If vr^2 =  u, then sqrt(u/v) = r.
+If vr^2 = -u, then sqrt(u/v) = r*sqrt(-1).
+
+If v is zero, r is also zero.
