@@ -6,4 +6,4 @@ authors = ["Henry de Valence <hdevalence@hdevalence.ca>"]
 [dependencies]
 sha2 = "0.7"
 hex = "0.3"
-curve25519-dalek = "0.17"
+curve25519-dalek = "0.19"
