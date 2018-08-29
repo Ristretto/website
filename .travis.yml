@@ -17,6 +17,8 @@ before_script:
   - which mdbook || cargo install mdbook
 
 script:
+  # Clean the cargo directory (? maybe this will fix caching issues)
+  - cargo clean
   # Pull dependencies for mdbook test
   - cargo test --release
   # Use prebuilt dependencies when running mdbook test
