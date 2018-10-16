@@ -37,4 +37,5 @@ Implementing Ristretto using an existing Edwards curve implementation requires t
 
 Implementation of these functions requires an inverse square root
 function.  This is often inlined into a point decompression function,
-so we also give formulas for implementing one for `ristretto255`.
+so we also [give formulas for implementing an inverse square root for
+`ristretto255`](formulas/invsqrt.html).
