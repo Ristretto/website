@@ -14,7 +14,7 @@ install:
 before_script:
   - npm install -g firebase-tools 
   # Check if the mdbook binary exists before compiling it
-  - which mdbook || cargo install mdbook
+  - which mdbook || cargo install --version 0.1.8 --force mdbook
 
 script:
   # Clean the cargo directory (? maybe this will fix caching issues)
