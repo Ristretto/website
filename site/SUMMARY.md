@@ -13,6 +13,7 @@
   - [Encoding in Affine Coordinates](./details/ristretto_encoding.md)
   - [Encoding in Extended Coordinates](./details/encoding_in_extended.md)
   - [Batched Double-and-Encode](./details/batched_double.md)
+  - [Ristretto and Decaf](./details/ristretto_and_decaf.md)
   - [Equality Testing](./details/equality.md)
   - [Elligator](./details/elligator.md)
 - [Explicit Formulas](./formulas/index.md)
