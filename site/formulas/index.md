@@ -22,26 +22,19 @@ distinct Ristretto point type.
 
 ## Implementation
 
-In terms of invasiveness to a pre-existing curve implementation,
-implementing Ristretto requires changing only:
+Implementing Ristretto using an existing Edwards curve implementation requires the following:
 
 0. A distinct type for Ristretto points which forwards curve operations
    on points to their corresponding canonical representative in the Ristretto
    group (as mentioned in the previous section);
-1. A function for equality checking (so that two representatives
-   of the same coset are considered equal);
-2. A function for encoding (so that two representatives of the
-   same coset are encoded as identical bitstrings);
-3. A function for decoding (so that only the canonical encoding of
+1. [A function for decoding](formulas/decoding.html) (so that only the canonical encoding of
    a coset is accepted);
-4. A function for hashing to the Ristretto group.
+2. [A function for encoding](formulas/encoding.html) (so that two representatives of the
+   same coset are encoded as identical bitstrings);
+3. [A function for equality checking](formulas/equality.html) (so that two representatives
+   of the same coset are considered equal);
+4. [A function for hashing to the Ristretto group](formulas/elligator.html).
 
-Internally, each coset is represented by a curve point; two points
-\\( P, Q \\) may represent the same coset in the same way that two
-points with different \\(X, Y, Z\\) coordinates may represent the
-same point.  The group operations are carried out with no overhead
-using Edwards formulae.
-
-Additionally, producing a Ristretto implementation will require a hash-to-point
-function.  We will explicitly detail this and the above changes in the following
-sections.
+Implementation of these functions requires an inverse square root
+function.  This is often inlined into a point decompression function,
+so we also give formulas for implementing one for `ristretto255`.
