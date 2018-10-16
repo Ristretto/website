@@ -20,11 +20,22 @@ dangerous and unsafe to implement the Ristretto functions as operating on
 arbitrary curve points, rather than only on the representatives contained in a
 distinct Ristretto point type.
 
-## TODO
+## Implementation
 
-This section should have explicit formulas for Ristretto, aimed at
-implementations.
+Implementing Ristretto using an existing Edwards curve implementation requires the following:
 
-It should also have a description of "how to implement Ristretto", i.e.,
-what functionality is required: encoding, decoding, equality,
-hash-to-point, type safety, etc.
+0. A distinct type for Ristretto points which forwards curve operations
+   on points to their corresponding canonical representative in the Ristretto
+   group (as mentioned in the previous section);
+1. [A function for decoding](formulas/decoding.html) (so that only the canonical encoding of
+   a coset is accepted);
+2. [A function for encoding](formulas/encoding.html) (so that two representatives of the
+   same coset are encoded as identical bitstrings);
+3. [A function for equality checking](formulas/equality.html) (so that two representatives
+   of the same coset are considered equal);
+4. [A function for hashing to the Ristretto group](formulas/elligator.html).
+
+Implementation of these functions requires an inverse square root
+function.  This is often inlined into a point decompression function,
+so we also [give formulas for implementing an inverse square root for
+`ristretto255`](formulas/invsqrt.html).
