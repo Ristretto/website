@@ -61,7 +61,7 @@ with inverse (dual)
 Note that there are actually two maps, one for each choice of square
 root.  This means that rather than transporting an encoding of
 \\(\mathcal J / \mathcal J[2]\\) along \\(\phi\\) to \\(\mathcal
-E_1\\), it's possible to travel along \\( \eta \circ \phi \\) to \\(
+E_1\\), it's possible to travel along \\( \eta \circ \psi \\) to \\(
 \mathcal E_2 \\).
 
 ## Ristretto and Decaf
