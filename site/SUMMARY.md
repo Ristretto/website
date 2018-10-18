@@ -16,6 +16,7 @@
   - [Ristretto and Decaf](./details/ristretto_and_decaf.md)
   - [Equality Testing](./details/equality.md)
   - [Elligator](./details/elligator.md)
+  - [Elligator to Extended Coordinates](./details/elligator_to_extended.md)
 - [Explicit Formulas](./formulas/index.md)
   - [Decoding to Extended Coordinates](./formulas/decoding.md)
   - [Encoding from Extended Coordinates](./formulas/encoding.md)
