@@ -5,7 +5,8 @@ points suitable for hashing to group elements.  Rather than mapping
 directly to the Edwards or Montgomery model, Decaf suggests using
 Elligator 2 to the Jacobi quartic \\(\mathcal J\\), then applying an
 isogeny to obtain a point on whichever curve is used for implementing
-group operations.
+group operations.  This allows implementations using different curves
+internally to have compatible Elligator maps.
 
 This method also applies to Ristretto, with a suitable change of variables.
 
