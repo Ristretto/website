@@ -50,3 +50,8 @@ The computation of \\(x^{(p-5)/8}\\) is already required for Ed25519
 decoding, so an Ed25519 implementation can obtain a `sqrt_ratio_i`
 function by refactoring the computation of \\(r\\) out of the decoding
 function and using `sqrt_ratio_i` to perform decoding.
+
+If the equality checks in (3), (4), (5) are implemented in
+constant-time and the conditional assignments in (6), (7) are also
+implemented in constant-time, then the entire computation can be done
+in constant time.

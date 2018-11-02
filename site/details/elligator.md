@@ -267,6 +267,4 @@ or
 \right)
 \\]
 depending on which square root exists, preferring the second when \\(r
-= 0\\) and both are square.  (When using the `ristretto255`
-parameters, the first is nonsquare when \\(r = 0\\)
-and there is no ambiguity).
+= 0\\) and both are square.

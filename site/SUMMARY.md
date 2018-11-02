@@ -18,7 +18,7 @@
   - [Decoding in Extended Coordinates](./formulas/decoding.md)
   - [Encoding in Extended Coordinates](./formulas/encoding.md)
   - [Equality Testing](./formulas/equality.md)
-  - [Hash-to-Point with Elligator](./formulas/elligator.md)
+  - [Hash-to-Group with Elligator](./formulas/elligator.md)
 - [`ristretto255` Test Vectors](./test_vectors/ristretto255.md)
 - [`ristretto448` Test Vectors](./test_vectors/ristretto448.md)
 - [Ristretto Implementations](./implementations.md)
