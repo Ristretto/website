@@ -1,5 +1,21 @@
 # Test vectors for `ristretto255`
 
+`ristretto255` encodes group elements using 255 bits and provides a
+prime-order group of size 2^252.  It can be implemented using
+Curve25519.
+
+For `ristretto255`, the parameters are
+\\[
+\begin{aligned}
+p &= 2^{255}-19 \\\\
+a\_2 = a &= -1 \\\\
+d\_2 = d &= -121665/121666.
+\end{aligned}
+\\]
+Field elements are considered negative when their low bit is set, as in Ed25519.
+The Elligator map uses \\(n = +\sqrt{-1}\\) as the quadratic nonresidue.
+
+
 ```rust
 // The test vectors below also have code to test them against the
 // curve25519_dalek implementation.

@@ -1,6 +1,6 @@
 # Encoding in Affine Coordinates
 
-We can write the above encoding/decoding procedure in affine
+We can write the Ristretto encoding/decoding procedure in affine
 coordinates, before describing optimized formulas to and from
 projective coordinates.
 
