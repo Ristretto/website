@@ -15,10 +15,11 @@ d\_2 = d &= -121665/121666.
 Field elements are considered negative when their low bit is set, as in Ed25519.
 The Elligator map uses \\(n = +\sqrt{-1}\\) as the quadratic nonresidue.
 
-
 ```rust
 // The test vectors below also have code to test them against the
 // curve25519_dalek implementation.
+//
+// These tests are run in CI against the curve25519-dalek implementation.
 
 extern crate sha2;
 extern crate hex;
