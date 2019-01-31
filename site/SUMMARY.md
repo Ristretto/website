@@ -7,6 +7,7 @@
   - [Curve Models](./details/curve_models.md)
   - [Isogenies](./details/isogenies.md)
   - [Encoding with Isogenies](./details/isogeny_encoding.md)
+  - [Conceptual Diagram](./details/conceptual_diagram.md)
   - [Ristretto in Affine Coordinates](./details/ristretto_encoding.md)
   - [Ristretto in Extended Coordinates](./details/encoding_in_extended.md)
   - [Equality Testing](./details/equality.md)
