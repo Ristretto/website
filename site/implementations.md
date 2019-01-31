@@ -1,6 +1,8 @@
 # `ristretto255` Implementations
 
-An [internet-draft][id] for ristretto255 is now available.
+An [internet-draft][id] for ristretto255 is now available, written by
+Henry de Valence, Jack Grigg, George Tankersley, Filippo Valsorda, and
+Isis Lovecruft.
 
 * Rust: [`curve25519-dalek`][dalek], by Isis Lovecruft and Henry de Valence;
 * Go: `ristretto255` (forthcoming), by George Tankersley and Filippo Valsorda;
