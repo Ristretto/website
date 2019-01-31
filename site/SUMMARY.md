@@ -20,4 +20,4 @@
   - [Equality Testing](./formulas/equality.md)
   - [Hash-to-Group with Elligator](./formulas/elligator.md)
 - [`ristretto255` Test Vectors](./test_vectors/ristretto255.md)
-- [Ristretto Implementations](./implementations.md)
+- [`ristretto255` Implementations](./implementations.md)
