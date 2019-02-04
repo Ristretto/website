@@ -38,7 +38,7 @@ This site is organized into several chapters:
 - [What is Ristretto?](./what_is_ristretto.html) describes what Ristretto provides to protocol implementors.
 - [Ristretto in Detail](./details/index.html) contains mathematical justification for why Ristretto works.
 - [Explicit Formulas](./formulas/index.html) describes how to implement Ristretto.
-- [Test Vectors](./test_vectors/index.html) contains test vectors for the Ristretto functions.
+- [Test Vectors](./test_vectors/ristretto255.html) contains test vectors for the Ristretto functions.
 - [Ristretto Implementations](./implementations.html) contains a list of implementations of Ristretto.
 
 ## About
