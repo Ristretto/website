@@ -8,7 +8,7 @@ Isis Lovecruft.
 * Go: `ristretto255` (forthcoming), by George Tankersley and Filippo Valsorda;
 * C: `ristretto-donna` (forthcoming), by Isis Lovecruft, based on Andrew Moon's `ed25519-donna`;
 * C: [`libsodium`][libsodium] (currently in git master branch), by Frank Denis;
-* AssemblyScript: [`wasm-crypto`][wasm-crypto] (forthcoming), by Frank Denis;
+* AssemblyScript: [`wasm-crypto`][wasm-crypto], by Frank Denis;
 
 [id]: https://datatracker.ietf.org/doc/draft-hdevalence-cfrg-ristretto/
 [dalek]: https://doc.dalek.rs/curve25519_dalek/
