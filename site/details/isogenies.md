@@ -16,7 +16,7 @@ via the isogeny
 \\]
 with dual
 \\[
-\hat \phi(s,t) = \left( \frac x y ,\quad \frac {2 - y^2 - a\_1 x^2} {y^2}\right).
+\hat \phi(x,y) = \left( \frac x y ,\quad \frac {2 - y^2 - a\_1 x^2} {y^2}\right).
 \\]
 It is also \\(2\\)-isogenous to the Montgomery curve 
 \\(
