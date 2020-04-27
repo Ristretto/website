@@ -12,7 +12,7 @@ is \\(2\\)-isogenous to the Edwards curve
 \\(\mathcal E\_1 = \mathcal E\_{a\_1,d\_1}\\)
 via the isogeny
 \\[
-\phi(s,t) = \left( \frac {2s} {1 + a\_1 s^2} ,\quad \frac {1 -as^2}{t} \right)
+\phi(s,t) = \left( \frac {2s} {1 + a\_1 s^2} ,\quad \frac {1 -a\_1 s^2}{t} \right)
 \\]
 with dual
 \\[
