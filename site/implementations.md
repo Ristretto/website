@@ -12,7 +12,7 @@ Isis Lovecruft.
 * Javascript with Typescript: [`noble-ed25519`][noble], by Paul Miller
 * Javascript: [`ristretto255-js`][ristretto255-js], by Valeria Nikolaenko and Kevin Lewi.
 
-[id]: https://datatracker.ietf.org/doc/draft-hdevalence-cfrg-ristretto/
+[id]: https://ietf.org/id/draft-irtf-cfrg-ristretto255-00.html
 [dalek]: https://doc.dalek.rs/curve25519_dalek/
 [libsodium]: https://download.libsodium.org/doc/advanced/point-arithmetic/ristretto
 [go_ristretto255]: https://github.com/gtank/ristretto255
