@@ -16,7 +16,7 @@ in extended coordinates, an implementation proceeds as follows.
     1. \\( (X, Y) \gets (X\_0, Y\_0) \\).
     2. \\( D \gets D\_2 \\).
 9. If \\( X Z\_{inv} \\) is negative, set \\( Y \gets - Y\\).
-10. Compute \\( s \gets |\sqrt{-a} (Z - Y) D| \\), i..e, compute
+10. Compute \\( s \gets |\sqrt{-a} (Z - Y) D| \\), i.e., compute
     \\(\sqrt{-a} (Z - Y) D\\) and negate it if it is negative.
 11. Return the canonical byte encoding of \\( s \\).
 
