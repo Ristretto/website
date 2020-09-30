@@ -1,4 +1,4 @@
-# Ristretto Website
+# Ristretto Website Coffee shot
 
 This repo contains the source code for the Ristretto website,
 [ristretto.group](https://ristretto.group).
