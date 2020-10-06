@@ -1,3 +1,3 @@
 # website
 The Ristretto Group Website
-This ia an amazing website
+this is quite an amazing website
