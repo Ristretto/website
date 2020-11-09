@@ -11,6 +11,7 @@ Isis Lovecruft.
 * AssemblyScript: [`wasm-crypto`][wasm-crypto], by Frank Denis.
 * Javascript with Typescript: [`noble-ed25519`][noble], by Paul Miller
 * Javascript: [`ristretto255-js`][ristretto255-js], by Valeria Nikolaenko and Kevin Lewi.
+* Zig: the [`zig`][zig] programming language includes ristretto255 in its standard library, implemented by Frank Denis.
 
 [id]: https://ietf.org/id/draft-irtf-cfrg-ristretto255-00.html
 [dalek]: https://doc.dalek.rs/curve25519_dalek/
@@ -19,3 +20,4 @@ Isis Lovecruft.
 [noble]: https://github.com/paulmillr/noble-ed25519
 [wasm-crypto]: https://github.com/jedisct1/wasm-crypto
 [ristretto255-js]: https://github.com/calibra/ristretto255-js
+[zig]: https://ziglang.org/
