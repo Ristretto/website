@@ -13,7 +13,7 @@ Isis Lovecruft.
 * Javascript: [`ristretto255-js`][ristretto255-js], by Valeria Nikolaenko and Kevin Lewi.
 * Zig: the [`zig`][zig] programming language includes ristretto255 in its standard library, implemented by Frank Denis.
 
-[id]: https://ietf.org/id/draft-irtf-cfrg-ristretto255-00.html
+[id]: https://datatracker.ietf.org/doc/draft-irtf-cfrg-ristretto255-decaf448/
 [dalek]: https://doc.dalek.rs/curve25519_dalek/
 [libsodium]: https://download.libsodium.org/doc/advanced/point-arithmetic/ristretto
 [go_ristretto255]: https://github.com/gtank/ristretto255
